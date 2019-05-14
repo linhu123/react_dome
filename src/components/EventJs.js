@@ -4,7 +4,8 @@ class EventJs extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            msg:"我是一个Event.js组件"
+            msg:"我是一个Event.js组件",
+            reMessage:"双向数据绑定"
         }
     }
 
@@ -35,6 +36,12 @@ class EventJs extends React.Component{
     buttonClick2 = ()=>{
         
     }
+    reMessage = (e)=>{
+        console.log(e.target.value)
+        this.setState({
+            reMessage:e.target.value
+        })
+    }
 
     render(){
         return(
@@ -49,6 +56,14 @@ class EventJs extends React.Component{
                 <hr></hr>
                 <br></br>
                 <input onKeyUp = {this.keyUp}/><button onClick = {this.buttonClick2}>键盘事件</button>
+                <hr></hr>
+                <hr></hr>
+                <br></br>
+                <p>{this.state.reMessage}</p>
+                <input type = "text" value = {this.state.reMessage} onChange = {this.reMessage}/>
+                {/* <input type="text" value={this.state.reMessage} onChange = {this.reMessage}/><button>双向数据绑定</button> */}
+
+
              </div>
         )
     }
