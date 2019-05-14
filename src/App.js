@@ -1,10 +1,12 @@
 import React from 'react';
+// eslint-disable-next-line
 import logo from './assets/images/logo.svg';
 import './assets/css/App.css';
-import Home from './components/Home.js'
+import EventJs from './components/EventJs.js';
 function App() {
   return (
-    <Home></Home>
+    
+    <EventJs></EventJs>
   );
 }
 
