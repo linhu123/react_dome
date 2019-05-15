@@ -15,6 +15,7 @@ class EventJs extends React.Component{
     //         msg:str
     //     })
     // }
+	//jaslkdjio
     inputChange = ()=>{
         let temp = this.refs.username.value;
         this.setState({
